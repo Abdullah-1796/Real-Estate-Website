@@ -1,0 +1,72 @@
+#admin-queries {
+    margin-top: 10%;
+    margin-bottom: 2%;
+}
+
+#queries-body {
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#queries * {
+    padding: 0;
+    margin: 5px;
+}
+
+#queries {
+    width: 90%;
+    padding: 15px 10px;
+    margin: 0 auto;
+    margin-bottom: 1%;
+    font-size: 17px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: aliceblue;
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+#queries div img {
+    width: 25px;
+    height: 25px;
+}
+
+#queries div {
+    display: flex;
+    align-items: center;
+}
+
+#queries-top {
+    display: flex;
+    align-items: center;
+}
+
+#queries-name {
+    font-size: 30px;
+    width: fit-content;
+}
+
+#queries-phone {
+    width: fit-content;
+}
+
+#queries-del {
+    width: fit-content;
+    height: fit-content;
+    margin: 0;
+    padding: 15px;
+    font-weight: 600;
+    position: absolute;
+    margin-left: 87%;
+    margin-top: 6.5%;
+    box-shadow: none;
+    transition: box-shadow 0.3s linear;
+}
+
+#queries-del:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}

@@ -1,0 +1,46 @@
+#blur-background-a {
+    position: relative;
+}
+  
+#blur-background-a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../components/Images/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(2px);
+    z-index: -1;
+}
+
+#AdminHome-outer {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.413);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+#AdminHome-outer div {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#welcome-heading {
+    font-size: 50px;
+    font-weight: 700;
+    text-align: center;
+}
+
+#welcome-des {
+    font-size: 30px;
+    text-align: justify;
+    font-weight: 500;
+}

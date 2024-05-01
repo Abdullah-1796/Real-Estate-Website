@@ -1,0 +1,148 @@
+#post {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: 10%;
+    margin-bottom: 2%;
+    width: 100%;
+}
+
+.post-link {
+    text-decoration: none;
+    color: black;
+    width: 45%;
+}
+
+#ad-outer {
+    width: 97%;
+    height: 250px;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    padding: 15px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 10px;
+    transition: box-shadow 0.3s linear;
+}
+
+#ad-outer:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+#ad {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+#ad-highlight {
+    width: 40%;
+    height: 100%;
+    background-color: blue;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#ad-highlight img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin: 0;
+    padding: 0;
+}
+
+#ad-details {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-left: 20px;
+    border-radius: 20px;
+}
+
+#ad-details > p {
+    font-size: 22px;
+    font-weight: 600 ;
+    margin: 0;
+    padding: 0;
+}   
+
+#minor-details {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#minor-details div {
+    margin-right: 15px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#minor-details div * {
+    margin: 0;
+    padding: 0;
+}
+
+#minor-details div p {
+    margin-left: 5px;
+}
+
+.ad-img {
+    width: 25px;
+    height: 25px;
+}
+
+#purpose-logo {
+    background-color:indianred;
+    color: white;
+    font-weight: bolder;
+    width: max-content;
+    height: max-content;
+    border-radius: 50px;
+    position: absolute;
+    padding: 1.2%;
+    margin-left: 38%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.add-post-button {
+    background-color:rgb(125, 10, 33);
+    padding: 13px 15px 19px 15px;
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    text-decoration: none;
+    font-size: 35px;
+    font-weight: bold;
+    color: white;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    transition: box-shadow 0.3s linear;
+}
+
+.add-post-button:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+#del-button {
+    background-color:crimson;
+    color: white;
+    font-weight: bolder;
+    width: max-content;
+    height: max-content;
+    border-radius: 50px;
+    position: absolute;
+    padding: 1.1% 2%;
+    margin-left: 38%;
+    margin-top: 4.5%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}

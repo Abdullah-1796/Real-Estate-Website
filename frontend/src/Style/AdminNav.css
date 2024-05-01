@@ -1,0 +1,55 @@
+img {
+    width: 100%;
+    height: 100%;
+}
+
+#logo-img {
+    width: 40%;
+    height: 10vh;
+}
+
+#upper {
+    /* background-image: url("../../public/Images/gradient.png"); */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+#bottom {
+    background-color: rgba(0, 0, 0, 0.750);
+    height: 2.5em;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-decoration: none;
+    border-top: 1px white solid;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.navlink {
+    color: white;
+    text-decoration: none;
+    opacity: 80%;
+}
+
+.navlink:hover {
+    opacity: 1;
+}
+
+#outer {
+    font-family: "Rubik", sans-serif;
+    font-size: 21px;;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 3;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rough Work</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <style>
+        
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h3 {
+            margin: 0;
+        }
+        li {
+            width: 49%;
+            display: inline-block;
+            margin-top: 1%;
+        }
+        ol {
+            margin: 0;
+            padding: 0;
+        }
+
+        #link {
+            width: 80%;
+        }
+        #first,
+        #second,
+        #third,
+        #forth,
+        #fifth,
+        #sixth,
+        #seventh,
+        #eight {
+            display: flex;
+            justify-content: space-between;
+            padding: 1%;
+            width: 99%;
+            margin: 1% 0 1% 0;
+        }
+        
+        #outer {
+            width: 75%;
+            padding: 5%;
+            border: 1px solid ;
+            border-radius: 15px;
+            background-color: rgba(244, 165, 96, 0.703);
+            font-weight: 900;
+            font-size: large;
+            margin: 10% 0;
+        }
+
+        input,
+        select {
+            margin-left: 3%;
+            border-radius: 5px;
+            height: 30px;
+        }
+
+        .headline {
+            width: 100%;
+        }
+        #headline {
+            width: 87%;
+            float: right;
+        }
+
+        .location {
+            width: 80%;
+        }
+        #location {
+            width: 72%;
+            margin-left: 5%;
+        }
+
+        .city {
+            width: 30%;
+            margin-left: 1%;
+            display: flex;
+            justify-content: end;
+        }
+        #city {
+            width: 100%;
+        }
+
+        .type,
+        .purpose,
+        .area,
+        .size,
+        .price,
+        .portion,
+        .beds,
+        .bath,
+        .kitchen {
+            width: 30%;
+        }
+
+        #type {
+            width: 40%;
+        }
+        #purpose {
+            width: 60%;
+        }        
+        #area {
+            width: 80%;
+        }
+        #size,
+        #price,
+        #portion,
+        #beds,
+        #bath,
+        #kitchen,
+        #area {
+            width: 70%;
+        }
+
+        .area,
+        .portion,
+        .kitchen {
+            display: flex;
+            justify-content: end;
+        }
+
+        button {
+            width: 100%;
+            height:35px;
+            background-color:crimson;
+            font-weight: 800;
+            color: white;
+            border-radius: 5px;
+            margin-top: 2%;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="outer">
+        <form action="" method="post">
+            <div id="first">
+                <div class="headline">
+                    <label for="headline">Headline</label>
+                    <input type="text" name="headline" id="headline">
+                </div>
+            </div>
+            <div id="second">
+                <div class="location">
+                    <label for="location">Location</label>
+                    <input type="text" name="location" id="location">
+                </div>
+                <div class="city">
+                    <label for="city">City</label>
+                    <select name="city" id="city">
+                        <option value="lahore">Lahore</option>
+                        <option value="islamabad">Islamabad</option>
+                        <option value="karachi">Karachi</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div id="forth">
+                <div class="size">
+                    <label for="size">Size&nbsp;</label>
+                    <input type="number" name="size" id="size">
+                </div>
+                <div class="price">
+                    <label for="price">Price</label>
+                    <input type="number" name="price" id="price">
+                </div>
+                <div class="portion">
+                    <label for="portion">Portions</label>
+                    <input type="number" name="portion" id="portion">
+                </div>
+            </div>
+            <div id="fifth">
+                <div class="beds">
+                    <label for="beds">Beds</label>
+                    <input type="number" name="beds" id="beds">
+                </div>
+                <div class="bath">
+                    <label for="bath">Bath&nbsp;</label>
+                    <input type="number" name="bath" id="bath">
+                </div>
+                <div class="kitchen">
+                    <label for="kitchen">Kitchen</label>
+                    <input type="number" name="kitchen" id="kitchen">
+                </div>
+            </div>
+            <div id="sixth">
+                <label for="img"></label>
+            </div>
+            <div id="third">
+                <div class="type">
+                    <label for="type">Property Type</label>
+                    <select name="type" id="type">
+                        <option value="home">Home</option>
+                        <option value="plot">Plot</option>
+                        <option value="flat">Flat</option>
+                    </select>
+                </div>
+                <div class="purpose">
+                    <label for="purpose">Purpose</label>
+                    <select name="purpose" id="purpose">
+                        <option value="sale">Sale</option>
+                        <option value="rent">Rent</option>
+                    </select>
+                </div>
+                <div class="area">
+                    <label for="area">Area</label>
+                    <select name="area" id="area">
+                        <option value="residential">Residential</option>
+                        <option value="commercial">Commercial</option>
+                    </select>
+                </div>
+            </div>
+            <div id="eight">
+                <ol>
+                    <h3 for="link">Image source links</h3>
+                    <br>
+                    <li class="link">
+                        1
+                        <input type="text" name="link" id="link">
+                    </li>
+                    <li class="link">
+                        2
+                        <input type="text" name="link" id="link">
+                    </li>
+                    <li class="link">
+                        3
+                        <input type="text" name="link" id="link">
+                    </li>
+                    <li class="link">
+                        4
+                        <input type="text" name="link" id="link">
+                    </li>
+                    <li class="link">
+                        5
+                        <input type="text" name="link" id="link">
+                    </li>
+                    <li class="link">
+                        6
+                        <input type="text" name="link" id="link">
+                    </li>
+                    <li class="link">
+                        7
+                        <input type="text" name="link" id="link">
+                    </li>
+                    <li class="link">
+                        8
+                        <input type="text" name="link" id="link">
+                    </li>
+                    <li class="link">
+                        9<input type="text" name="link" id="link">
+                    </li>
+                    <li class="link">
+                        10<input type="text" name="link" id="link">
+                    </li>
+                </ol>
+            </div>
+            <button type="submit">Add Post</button>
+        </form>
+    </div>
+</body>
+</html>

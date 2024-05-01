@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rough 4</title>
+    <style>
+        #filter-body {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        #filter {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            width: 60%;
+            height: 40vh;
+            border-radius: 25px;
+            padding: 2%;
+            box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        #filter div {
+            height: 20%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #filter-inp1 *, 
+        #filter-inp2 * {
+            width: 20%;
+            padding: 0 5px;
+            margin: 0;
+            border-radius: 10px;
+            font-size: 15px;
+        }
+
+        #filter-inp1,
+        #filter-inp2 {
+            justify-content: space-evenly;
+        }
+
+        #fLoc {
+            width: 45%;
+        }
+
+        button {
+            background-color: rgba(0, 0, 0, 0);
+            color: white;
+            border: none;
+            font-size: 20px;
+        }
+
+        #filter-button {
+            height: 15%;
+            font-size: 18px;
+            border-radius: 10px;
+            background-color: rgb(125, 10, 33);
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+
+        #filter-head {
+            color: black;
+            font-weight: 800;
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div id="filter-body">
+        <div id="filter">
+            <div id="filter-head">
+                <p>Apply Filter</p>
+                <button>x</button>
+            </div>
+            <div id="filter-inp1">
+                <input type="text" name="fLoc" id="fLoc" placeholder="Location" />
+                <select name="fCity" id="fCity">
+                    <option value="Lahore">Lahore</option>
+                    <option value="Islamabad">Islamabad</option>
+                    <option value="Karachi">Karachi</option>
+                </select>
+                <select name="fType" id="fType">
+                    <option value="Home">Home</option>
+                    <option value="Plot">Plot</option>
+                    <option value="Flat">Flat</option>
+                </select>
+            </div>
+            <div id="filter-inp2">
+                <select name="fPurpose" id="fPurpose">
+                    <option value="Sale">Sale</option>
+                    <option value="Rent">Rent</option>
+                </select>
+                <select name="fArea" id="fArea">
+                    <option value="Residential">Residential</option>
+                    <option value="Commercial">Commercial</option>
+                </select>
+                <input type="number" name="fSize" id="fSize" placeholder="Marla" min="1" />
+                <input type="number" name="fPrice" id="fPrice" placeholder="Price" min="1" />
+            </div>
+            <button id="filter-button">Apply Filter</button>
+        </div>
+    </div>
+</body>
+</html>
