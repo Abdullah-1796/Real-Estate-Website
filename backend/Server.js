@@ -52,35 +52,38 @@ app.post("/login", (req, res) => {
 
 function sendEmails()
 {
+    console.log("sendEmails() function called");
 	const str = "select name, email from client";
 	db.query(str, (err, data) => {
 		if(err)
 		{
 			console.error("Error in getting emails", err);
 		}
-		else {
-			console.log(data.rows);
-			sendEmail();
-		}
+		console.log(data.rows);
+		const d = data.rows;
+		d.map((d) => {
+			sendEmail(d.email, d.name, "New Updates", 'Hope you are doing well, new posts are waiting for you. Jump on to our site and find out your dream homes.');
+		});
 	});
 }
 
-function sendEmail()
+function sendEmail(to, name, subject, content)
 {
 	const transporter = nodemailer.createTransport({
 		service: 'gmail',
 		auth: {
-			user: 'your-email@gmail.com',
-			pass: 'your-password'
-		}
+			user: 'opendevices100@gmail.com',
+			pass: 'ofot lghj qgwx mcqj'
+		},
+		secure: true,
 	});
 	
 	// Email content
 	const mailOptions = {
-		from: 'your-email@gmail.com',
-		to: 'recipient@example.com',
-		subject: 'Test Email',
-		text: 'This is a test email from Nodemailer'
+		from: 'opendevices100@gmail.com',
+		to: to,
+		subject: subject,
+		html: '<h1>Hi '+name+'</h1><p>'+content+'</p></br></br><p>Thanks!</p>'
 	};
 	
 	// Send mail with defined transport object
@@ -188,6 +191,7 @@ app.post("/AdminHome/ManagePost/AddPost", (req, res) => {
 		}
 		//id = data.rows[0].id;
 		insertImages(data.rows[0].id);
+		sendEmails();
 		return res.json(data);
 	});
 	
@@ -435,7 +439,6 @@ app.post("/UserHome/GetInTouch", (req, res) => {
 app.get("/AdminHome/Queries", (req, res) => {
 	const str = "select c.*, q.qid, q.query from client c inner join query q on c.id = q.id";
 
-	sendEmails();
 	db.query(str, (err, data) => {
 		if(err)
 		{
