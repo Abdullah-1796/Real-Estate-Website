@@ -34,22 +34,6 @@ db.connect((err) => {
 	console.log('Connected to postgres database');
   });
 
-app.post("/login", (req, res) => {
-	const str = "INSERT INTO login (username, password) VALUES ('"+req.body.user+"', '"+req.body.pass+"')";
-	const values = [
-		req.body.user,
-		req.body.pass
-	]
-	console.log(values);
-	db.query(str, (err, data) => {
-		if(err)
-		{
-			return res.json("Error");
-		}
-		return res.json(data);
-	});
-});
-
 function sendEmails()
 {
     console.log("sendEmails() function called");
@@ -460,6 +444,29 @@ app.delete("/AdminHome/Queries/:qid", (req, res) => {
 		return res.json(data);
 	});
 });
+
+app.post("/login", (req, res) => {
+	//console.log(req.body.user, req.body.pass);
+	const str = "select * from adminId";
+
+	db.query(str, (err, data) => {
+		if(err)
+		{
+			console.log(err);
+			return res.json("Error");
+		}
+		console.log(data.rows[0].username);
+		if(req.body.user == data.rows[0].username && req.body.pass == data.rows[0].password)
+		{
+			console.log("Success");
+			return res.json("Success");
+		}
+		else {
+			console.log("NotSuccess");
+			return res.json("NotSuccess");
+		}
+	});
+})
 
 app.listen(port, () => {
   console.log(`Server is listening from port ${port}.`);

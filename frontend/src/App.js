@@ -10,7 +10,7 @@ import {
 import AdminHome from "./components/AdminHome";
 import ManagePosts from "./components/ManagePost";
 import Queries from "./components/Queries";
-import Login from "../src/components/Login";
+import LoginPage from "./components/LoginPage";
 import AddPost from "./components/AddPost";
 import UpdatePost from "./components/UpdatePost";
 import UserHome from "./components/UserHome";
@@ -33,7 +33,7 @@ function App() {
           <Route exact path="/AdminHome/ManagePosts/AddPost" element={<AddPost />} />
           <Route exact path="/AdminHome/ManagePosts/UpdatePost/:id" element={<UpdatePost />} />
 
-          <Route exact path="/login" element={<Login />} />
+          <Route exact path="/Login" element={<LoginPage />} />
 
 
           
