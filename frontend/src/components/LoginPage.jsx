@@ -34,7 +34,7 @@ function LoginPage()
             }
         });
     }
-    
+
     return (
         <div  id="login-outer">
             <div id="login-admin-body">
@@ -47,7 +47,7 @@ function LoginPage()
                         </div>
                         <div>
                             <label htmlFor="password">Password</label>
-                            <input type="password" name="pass" id="password" required value={values.pass} onChange={handleInput} />
+                            <input type="password" name="pass" id="password" required placeholder="Enter Password" value={values.pass} onChange={handleInput} />
                         </div>
                         <div><button>Login</button></div>
                     </form>
