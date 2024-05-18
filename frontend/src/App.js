@@ -17,6 +17,8 @@ import UserHome from "./components/UserHome";
 import FindProperty from "./components/FindProperty";
 import PropertyDetails from "./components/PropertyDetails";
 import PassQuery from "./components/PassQuery";
+import UserChat from "./components/UserChat";
+import AdminChat from "./components/AdminChat";
 
 function App() {
   return (
@@ -29,7 +31,7 @@ function App() {
           <Route exact path="/AdminHome/ManageAds" element={<AdminHome />} />
           <Route exact path="/AdminHome/Queries" element={<Queries />} />
           <Route exact path="/AdminHome/ManageNewProjects" element={<AdminHome />} />
-          <Route exact path="/AdminHome/LiveChats" element={<AdminHome />} />
+          <Route exact path="/AdminHome/LiveChats" element={<AdminChat />} />
           <Route exact path="/AdminHome/ManagePosts/AddPost" element={<AddPost />} />
           <Route exact path="/AdminHome/ManagePosts/UpdatePost/:id" element={<UpdatePost />} />
 
@@ -42,6 +44,7 @@ function App() {
           <Route exact path="/UserHome/FindProperty" element={<FindProperty />} />
           <Route exact path="/UserHome/PassQuery" element={<PassQuery />} />
           <Route exact path="/UserHome/FindProperty/PropertyDetails/:id" element={<PropertyDetails />} />
+          <Route exact path="/UserHome/Live Chat" element={<UserChat />} />
           
 
           <Route path="*" element={<Navigate to="/UserHome" />} />

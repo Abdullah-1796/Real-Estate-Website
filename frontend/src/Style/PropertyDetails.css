@@ -1,7 +1,8 @@
 #ad-preview {
     margin: 10px;
     padding: 0;
-    padding-top: 8%;
+    padding-top: 16vh;
+    width: 100%;
 }
 
 #images {
@@ -71,4 +72,43 @@
     border-radius: 10px;
     padding: 3px;
     font-weight: 700;
+}
+
+@media only screen and (max-width: 900px) {
+    #ad-preview {
+        padding-top: 12vh;
+    }
+
+    h1 {
+        font-size: larger;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    #ad-preview {
+        margin: 0;
+    }
+
+    #ad-preview > #inner-ad-preview {
+        display: block;
+    }
+    #images {
+        width: 100%;
+        height: 40vh;
+    }
+
+    #images img {
+        width: fit-content;
+        height: 100%;
+        flex-direction: row;
+    }
+
+    #ad-description {
+        width: 100%;
+        box-shadow: none;
+    }
+
+    #imgCount {
+        height: 40vh;
+    }
 }

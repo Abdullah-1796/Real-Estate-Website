@@ -4,7 +4,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    padding-top: 10%;
+    padding-top: 20vh;
     position: relative;
 }
 
@@ -152,4 +152,42 @@ button {
     margin-top: 2%;
     border: none;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+@media only screen and (max-width: 1200px) {
+    #container div div input,
+    #container div div select {
+        width: 99%;
+        margin: 0;
+    }
+
+    #container div {
+        display: block;
+    }
+
+    .headline,
+    .location,
+    .city,
+    .type,
+    .purpose,
+    .area,
+    .size,
+    .price,
+    .portion,
+    .beds,
+    .bath,
+    .kitchen {
+        width: 99%;
+        margin: 0;
+    }
+
+    li {
+        width: 99%;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .postContainer {
+        padding-top: 15vh;
+    }
 }

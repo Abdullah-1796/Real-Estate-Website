@@ -445,6 +445,88 @@ app.delete("/AdminHome/Queries/:qid", (req, res) => {
 	});
 });
 
+function deleteChat(uid)
+{
+	const str = "delete from chat where from_ = '"+uid+"' or to_ = '"+uid+"'";
+	db.query(str, (err, data) => {
+		if(err)
+		{
+			console.log("Error in deleting chats");
+		}
+	})
+}
+
+app.get("/UserHome/Chat", (req, res) => {
+	const str = "select * from chatUsers where busy = 'no' order by uid limit 1";
+
+	db.query(str, (err, data) => {
+		if(err)
+		{
+			return res.json("Error");
+		}
+		if(data.rowCount == 1)
+		{
+			const uid = data.rows[0].uid;
+			const str1 = "update chatUsers set busy = 'yes' where uid = '"+uid+"'";
+			db.query(str1, (err, data) => {
+				if(err)
+				{
+					return res.json("Error");
+				}
+				else {
+					deleteChat(uid);
+					return res.json(uid);
+				}
+			});
+		}
+		else
+			return res.json("not available");
+	});
+});
+
+app.post("/UserHome/sendMessage", (req, res) => {
+	const from = req.body.from;
+	const to = req.body.to;
+	const message = req.body.message;
+
+	console.log(to, from, message);
+	const str = "insert into chat(from_, to_, message) values('"+from+"', '"+to+"', '"+message+"')";
+
+	db.query(str, (err, data) => {
+		if(err)
+		{
+			return res.json("Error");
+		}
+
+		//getting updated data
+		const str1 = "select * from chat where (from_ = '"+from+"' and to_ = '"+to+"') or (from_ = '"+to+"' and to_ = '"+from+"') order by cid";
+		db.query(str1, (err, data) => {
+			if(err)
+			{
+				return res.json("Error");
+			}
+			res.json(data);
+		});
+	});
+});
+
+app.post("/AdminHome/updateChatting", (req, res) => {
+	const from = req.body.from;
+	const to = req.body.to;
+	const message = req.body.message;
+
+	console.log(to, from, message);
+	const str = "select * from chat where (from_ = '"+from+"' and to_ = '"+to+"') or (from_ = '"+to+"' and to_ = '"+from+"') order by cid";
+
+	db.query(str, (err, data) => {
+		if(err)
+		{
+			return res.json("Error");
+		}
+		res.json(data);
+	});
+});
+
 app.post("/login", (req, res) => {
 	//console.log(req.body.user, req.body.pass);
 	const str = "select * from adminId";
@@ -466,7 +548,7 @@ app.post("/login", (req, res) => {
 			return res.json("NotSuccess");
 		}
 	});
-})
+});
 
 app.listen(port, () => {
   console.log(`Server is listening from port ${port}.`);

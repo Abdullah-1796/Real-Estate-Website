@@ -5,12 +5,13 @@ img {
 
 #logo-img {
     width: 40%;
-    height: 10vh;
+    height: 100%;
 }
 
 #upper {
     /* background-image: url("../../public/Images/gradient.png"); */
     width: 100%;
+    height: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,7 +20,7 @@ img {
 
 #bottom {
     background-color: rgba(0, 0, 0, 0.750);
-    height: 2.5em;
+    height: 40%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -42,14 +43,22 @@ img {
 
 #outer {
     font-family: "Rubik", sans-serif;
-    font-size: 21px;;
+    font-size: 21px;
     width: 100%;
     position: fixed;
     top: 0;
     z-index: 3;
+    height: 20%;
 }
 
 body {
     margin: 0;
     padding: 0;
+}
+
+@media only screen and (max-width: 900px) {
+    #outer {
+        font-size: 15px;
+        height: 15%;
+    }
 }

@@ -4,6 +4,11 @@ import "../Style/AdminNav.css";
 
 function UserNav()
 {
+    const openInNewTab = (url) => {
+        const newWindow = window.open(url, '_blank', 'noopener,noreferrer');
+        if (newWindow) newWindow.opener = null;
+    };
+
     return (
         <div id="outer">
             <div id="upper">
@@ -16,7 +21,7 @@ function UserNav()
                 <div><Link to={"/UserHome/NewProjects"} className="navlink">New Projects</Link></div>
                 <div><Link to={"/UserHome/Ads"} className="navlink">Ads</Link></div>
                 <div><Link to={"/UserHome/PassQuery"} className="navlink">Pass Queries</Link></div>
-                <div><Link to={"/UserHome/Live Chat"} className="navlink">Live Chat</Link></div>
+                <div><Link to={"#"} onClick={() => {openInNewTab("http://localhost:3000/UserHome/Live%20Chat")}} className="navlink">Live Chat</Link></div>
             </div>
         </div>
     );

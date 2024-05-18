@@ -44,3 +44,13 @@
     text-align: justify;
     font-weight: 500;
 }
+
+@media only screen and (max-width: 900px) {
+    #welcome-heading {
+        font-size: 40px;
+    }
+
+    #welcome-des {
+        font-size: 25px;
+    }
+}

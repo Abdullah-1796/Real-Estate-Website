@@ -96,7 +96,7 @@ function PropertyDetails()
             <UserNav />
             <div id="ad-preview">
                 <h1>{data.headline}</h1>
-                <div>
+                <div id="inner-ad-preview">
                     <div id="images">
                         <div>
                             <button id="left-btn" className="img-btn" onClick={prevImg}>{"<"}</button>

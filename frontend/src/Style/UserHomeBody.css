@@ -22,7 +22,7 @@
     display: flex;
     justify-content: space-evenly;
     background-color: rgba(255, 255, 255, 0.413);
-    padding-top: 130px;
+    padding-top: 20vh;
 }
 
 #about-us {
@@ -133,4 +133,54 @@
 .a2 .contact {
     background-color: bisque;
     color: rgb(125, 10, 33);
+}
+
+@media only screen and (max-width: 1200px) {
+    #UserHome-outer {
+        display: block;
+    }
+
+    #about-us {
+        width: 92%;
+    }
+
+    #agents {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .agent {
+        width: 35%;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    #UserHome-outer {
+        display: block;
+    }
+
+    #about-us {
+        width: 92%;
+    }
+
+    #agents {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .agent {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    #welcome-heading {
+        font-size: 40px;
+    }
+
+    #welcome-des {
+        font-size: 25px;
+    }
 }

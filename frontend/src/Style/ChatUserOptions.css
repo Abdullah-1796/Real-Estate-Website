@@ -1,0 +1,23 @@
+#chat-user-outer {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: rgb(247, 237, 237);
+    background-color: rgb(65, 121, 145);
+    /* background-color: rgb(201, 191, 191); */
+    /* background-color: rgb(148, 136, 136); */
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2), 6px 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.user {
+    width: 90%;
+    background-color: white;
+    background-color: rgb(247, 237, 237);
+    margin: 15px auto 0 auto;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: large;
+}

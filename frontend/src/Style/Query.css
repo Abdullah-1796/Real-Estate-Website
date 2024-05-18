@@ -1,5 +1,5 @@
 #admin-queries {
-    margin-top: 10%;
+    margin-top: 22vh;
     margin-bottom: 2%;
 }
 
@@ -61,8 +61,8 @@
     padding: 15px;
     font-weight: 600;
     position: absolute;
-    margin-left: 87%;
-    margin-top: 6.5%;
+    margin-left: 85%;
+    margin-top: -17.5vh;
     box-shadow: none;
     transition: box-shadow 0.3s linear;
 }
@@ -73,4 +73,20 @@
 
 #queries-content {
     margin-right: 100px;
+}
+
+@media only screen and (max-width: 900px) {
+    #queries-del {
+        margin-left: 80%;
+    }
+    
+    #admin-queries {
+        margin-top: 16vh;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #queries-del {
+        margin-left: 76%;
+    }
 }
