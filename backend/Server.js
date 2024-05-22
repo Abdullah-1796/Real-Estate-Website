@@ -475,6 +475,7 @@ app.get("/UserHome/Chat", (req, res) => {
 				}
 				else {
 					deleteChat(uid);
+					console.log("Chats deleted");
 					return res.json(uid);
 				}
 			});

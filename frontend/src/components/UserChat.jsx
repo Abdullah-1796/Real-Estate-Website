@@ -3,18 +3,18 @@ import UserNav from "./UserNav";
 import Chat from "./Chat";
 import "../Style/UserChat.css";
 import axios from "axios";
-import { useHistory } from "react-router-dom";
 
 function UserChat()
 {
     const [uid, setUid] = React.useState("");
     const [flag, setFlag] = React.useState(false);
+    const hasFetched = React.useRef(false);
 
     function setFalse()
     {
         setFlag(false);
     }
-
+    
     const informAdmin = () => {
         localStorage.setItem("a-flag", "true");
         console.log("User sent message");
@@ -39,12 +39,13 @@ function UserChat()
         };
       }, []);
 
-    function getUid()
+    const getUid = () =>
     {
+        console.log("retrieving uid");
         axios.get("http://localhost:3001/UserHome/Chat")
         .then(res => {
             setUid(res.data);
-            console.log(res.data);
+            console.log("Data: ", res.data);
         })
         .catch(error => {
             console.error("Unable to fetch UID", error);
@@ -52,13 +53,11 @@ function UserChat()
     };
 
     React.useEffect(() => {
-        window.onload = getUid;
-        // Alternatively, you can call getUid directly:
-        // getUid();
-        return () => {
-            window.onload = null; // Cleanup to avoid memory leaks
-        };
-    }, [getUid]);
+        if (!hasFetched.current) {
+            getUid();
+            hasFetched.current = true;
+        }
+    }, []);
 
     return (
         <div id="user-chat-body">
